@@ -22,7 +22,7 @@ const authentication =  function (req, res, next) {
 const authorisation = async function (req, res, next) {
     try {
         let blogid = req.params.blogId
-        let blog = await blogModel.findById({ _id: blogid })
+        let blog = await blogModel.findById( blogid )
         if (blog) {
             if (blog.authorId != req.loggedInAuthorId) {
                 return res.status(403).send({ status: false, msg: 'unauthorised author' })

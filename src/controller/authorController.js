@@ -2,7 +2,7 @@ const AuthorModel = require("../models/authorModel");
 const jwt = require('jsonwebtoken')
 
 
-const createAuthor = async function (req, res) {
+const createAuthor = async function (req,res) {
     try {
         const emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/
         const nameRegex = /^[a-z\s]+$/i
